@@ -56,8 +56,8 @@ function Content() {
 function App() {
   const { width, height } = useWindowSize()
   return (
-    <main className="relative h-screen w-screen overflow-clip bg-primary-200 text-primary-100 md:text-primary-950">
-      <div className="h-screen w-screen">{width && height && <RibbonBgSvg width={width} height={height}></RibbonBgSvg>}</div>
+    <main className="relative w-screen bg-primary-200 text-primary-100 md:text-primary-950">
+      <div className="fixed h-screen w-screen">{width && height && <RibbonBgSvg width={width} height={height}></RibbonBgSvg>}</div>
       <div className="font-sans-serif absolute left-0 top-0 flex min-h-screen w-full backdrop-brightness-50 md:backdrop-filter-none">
         <div className="flex w-0 grow flex-col items-center justify-center md:w-2/5"></div>
         <div className="flex w-full grow flex-col items-center justify-center md:w-3/5 md:justify-end">
