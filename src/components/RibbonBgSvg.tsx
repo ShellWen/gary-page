@@ -11,18 +11,20 @@ export default function RibbonBgSvg({ className, width, height }: AnimatedRibbon
     const indexOffsetX = ribbonWidth * index
     const degree = Math.PI / 6 // 30°
     const topOffsetX = Math.sin(degree) * height
-    const p1 = [topOffsetX, 0]
-    const p2 = [0, height]
-    const p3 = [ribbonWidth, height]
-    const p4 = [topOffsetX + ribbonWidth, 0]
+    const p1 = [width+topOffsetX, 0]
+    const p2 = [width-ribbonWidth, height]
+    const p3 = [width, height]
+    const p4 = [width+topOffsetX + ribbonWidth, 0]
 
     Array.from([p1, p2, p3, p4]).forEach((p) => {
-      p[0] += indexOffsetX
+      p[0] -= indexOffsetX
+      p[0] -= topOffsetX
+      p[0] -= ribbonWidth
     })
 
     // 为了防止因舍入误差导致出现白线，这里将 X 轴坐标向左移动 ${index}px
     Array.from([p1, p2, p3, p4]).forEach((p) => {
-      p[0] -= Math.max(0, index)
+      p[0] += Math.max(0, index)
     })
 
     return (
