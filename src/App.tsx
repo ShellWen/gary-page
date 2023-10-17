@@ -56,14 +56,14 @@ function Content() {
       <div className="mt-2 text-center text-lg italic md:text-left">To see a World in a Grain of Sand And a Heaven in a Wild Flower</div>
       <div className="mt-2 text-xl">
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        Hey there, I'm <b>Gary</b> from <b>Jiangsu</b>.<br />
+        Hey there, I'm <b>Gary</b> from <b>Nanjing, China</b>.<br />
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        I'm a junior studying <b>electronic info engineering.</b>
+        I'm a junior studying <b>Electronic Engineering.</b>
         <br />
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         Beyond that, I'm all about <b>humanities</b>, <b>history</b>, <b>philosophy</b>, and <b>psychology</b>.<br />
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        When I'm not hitting the books, you'll find me in the pool or on the <b>badminton</b> court.
+        You'll catch me splashing <b>in the pool</b> or smashing shuttlecocks on the <b>badminton court</b>, living my best water and racquet life!
         <br />
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         And yeah, I'm a total <b>car enthusiast</b>.
