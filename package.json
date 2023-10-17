@@ -12,11 +12,11 @@
   "dependencies": {
     "@fontsource-variable/noto-sans-sc": "^5.0.3",
     "@fontsource/noto-serif-sc": "^5.0.7",
-    "@icons-pack/react-simple-icons": "^9.1.0",
     "@uidotdev/usehooks": "^2.4.0",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.5",

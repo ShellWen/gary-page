@@ -1,7 +1,7 @@
 import RibbonBgSvg from '@components/RibbonBgSvg.tsx'
-import { SiGithub, SiInstagram, SiTelegram, SiTwitter } from '@icons-pack/react-simple-icons'
 import { useWindowSize } from '@uidotdev/usehooks'
 import React from 'react'
+import {FaArrowRight, FaGithub, FaInstagram, FaTelegram, FaTwitter} from 'react-icons/fa6'
 
 function FooterDivider() {
   return <span className="hidden md:inline"> / </span>
@@ -18,7 +18,6 @@ function FooterLink({
   }>
   text: string
 }) {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const Icon = icon
   return (
     <a href={href} target="_blank" rel="noreferrer" className="inline-block font-medium">
@@ -31,30 +30,35 @@ function FooterLink({
 function Footer() {
   return (
     <footer className="flex flex-col pt-4 font-sans md:block [&>*]:py-1">
-      <FooterLink href="https://twitter.com/TargaryenLiu" icon={SiTwitter} text=" @TargaryenLiu" />
+      <FooterLink href="https://twitter.com/TargaryenLiu" icon={FaTwitter} text=" @TargaryenLiu" />
       <FooterDivider />
-      <FooterLink href="https://t.me/GaryTargaryen" icon={SiTelegram} text=" @GaryTargaryen" />
+      <FooterLink href="https://t.me/GaryTargaryen" icon={FaTelegram} text=" @GaryTargaryen" />
       <FooterDivider />
-      <FooterLink href="https://github.com/TargaryenGary" icon={SiGithub} text=" @TargaryenGary" />
+      <FooterLink href="https://github.com/TargaryenGary" icon={FaGithub} text=" @TargaryenGary" />
       <FooterDivider />
-      <FooterLink href="https://www.instagram.com/TargaryenLiu/" icon={SiInstagram} text=" @TargaryenLiu" />
+      <FooterLink href="https://www.instagram.com/TargaryenLiu/" icon={FaInstagram} text=" @TargaryenLiu" />
       <br />
-      <span>
+      <div>
         Made with <span className="text-red-500">❤</span> by{' '}
         <a href="https://github.com/ShellWen" target="_blank" rel="noreferrer">
           ShellWen
         </a>
-      </span>
+      </div>
+      <div>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer" className="text-sm text-inherit">
+          苏ICP备2023004319号-1
+        </a>
+      </div>
     </footer>
   )
 }
 
 function Content() {
   return (
-    <div className="flex flex-col items-center justify-center break-words p-16 text-left md:items-start lg:p-24">
+    <div className="flex flex-col items-center justify-center break-words p-16 md:items-start lg:p-24">
       <header className="text-6xl font-black">Gary</header>
-      <div className="mt-2 text-center text-lg italic md:text-left">To see a World in a Grain of Sand And a Heaven in a Wild Flower</div>
-      <div className="mt-2 text-xl">
+      <div className="mt-2 text-center text-lg italic md:text-left w-full">To see a World in a Grain of Sand And a Heaven in a Wild Flower</div>
+      <div className="mt-2 text-left text-xl w-full">
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         Hey there, I'm <b>Gary</b> from <b>Nanjing, China</b>.<br />
         {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -63,10 +67,17 @@ function Content() {
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         Beyond that, I'm all about <b>humanities</b>, <b>history</b>, <b>philosophy</b>, and <b>psychology</b>.<br />
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        You'll catch me splashing <b>in the pool</b> or smashing shuttlecocks on the <b>badminton court</b>, living my best water and racquet life!
+        You'll catch me splashing <b>in the pool</b> or smashing shuttlecocks on the <b>badminton court</b>, living my best water and
+        racquet life!
         <br />
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         And yeah, I'm a total <b>car enthusiast</b>.
+      </div>
+      <div className="mt-2 text-left text-lg w-full">
+        {/* eslint-disable-next-line react/jsx-no-target-blank */}
+        <a href="https://blog.targaryenliu.com" target="_blank" className="font-bold">
+          <FaArrowRight className="inline-block"/>More in Blog
+        </a>
       </div>
       <Footer />
     </div>
